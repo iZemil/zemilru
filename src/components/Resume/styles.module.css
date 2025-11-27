@@ -125,7 +125,7 @@
 	left: 0;
 	width: 100%;
 	z-index: 999;
-	background: #3578e5;
+	background: var(--ifm-color-primary);
 	color: #fff;
 	display: flex;
 	align-items: center;
