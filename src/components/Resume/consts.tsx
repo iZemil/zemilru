@@ -21,6 +21,7 @@ export enum ETech {
 	sqlalchemy = 'SQLAlchemy',
 	swagger = 'Swagger',
 	rabbitmq = 'RabbitMQ',
+	k6 = 'Grafana K6',
 
 	// Frontend
 	reactjs = 'ReactJS',
@@ -105,6 +106,7 @@ export const RESUME: IResume = {
 		{ name: ETech.typeorm, years: 6 },
 		{ name: ETech.mongodb, years: 3 },
 		{ name: ETech.mongoose, years: 3 },
+		{ name: ETech.k6, years: 2 },
 
 		{ name: ETech.html, years: 10 },
 		{ name: ETech.reactjs, years: 8 },
@@ -124,16 +126,14 @@ export const RESUME: IResume = {
 		{
 			role: 'Senior Backend - Teamlead',
 			companyName: 'haqqex.com',
-			projectDesc: `Sharia-compliant islamic crypto trading exchange.`,
+			projectDesc: `In developing the backend for the new crypto exchange HAQQEX, I led key technical initiatives: from designing core trading mechanisms and ensuring high performance to planning sprints and strengthening the team.`,
 			from: new Date('2023 May'),
 			to: new Date('2025 Oct'),
 			achievements: [
-				'Developed a mechanism for trading orders and trading pairs',
-				'Implemented a mechanism for deposits and withdrawals of crypto assets',
-				'Supported high-performance solutions in conditions of high load on trading servers',
-				'Wrote integration tests to identify any potential issues before release',
-				'Planned technical sprints with focus on the most priority goals',
-				'Led technical interviews for potential backend developers',
+				"Core Trading System Development: Designed and implemented trading order engines, trading pairs, and asset operations (deposit/withdrawal), which formed the foundation for the entire exchange's functionality.",
+				'Reliability and Performance Optimization: Enhanced server throughput under high-load conditions (over 4,000 orders per second) and introduced integration testing to minimize deployment risks.',
+				'Team Leadership and Development: Managed a team of 5+ developers by coordinating development through technical sprint planning, focusing on product priorities, and participating in the hiring of new backend developers.',
+				`Test Automation and Performance Validation: Architected and implemented the testing infrastructure, focusing on integration tests using Jest as core framework, Docker and CI/CD. Conducted regular stress testing sessions to proactively uncover scalability issues, ensuring the trading platform's performance and stability.`,
 			],
 			stack: [
 				ETech.typescript,
@@ -141,6 +141,7 @@ export const RESUME: IResume = {
 				ETech.nestjs,
 				ETech.postgres,
 				ETech.rabbitmq,
+				ETech.k6,
 
 				ETech.docker,
 				ETech.jest,
@@ -148,19 +149,15 @@ export const RESUME: IResume = {
 		},
 
 		{
-			role: 'Teamlead, CEO',
+			role: 'Teamlead, CTO',
 			companyName: 'BLLNG.com',
-			projectDesc: `My startup venture: a crypto project for processing transactions across multiple blockchain networks.
-			This platform provides the embedding of crypto payments, which allows users to pay for products and services using cryptocurrency.`,
+			projectDesc: `As the key developer, I successfully built and launched the platform's MVP, taking full ownership of both frontend and backend architecture.`,
 			from: new Date('2022 Apr'),
 			to: new Date('2023 May'),
 			achievements: [
-				'Developed MVP version of web service, resulting in a successful launch of the platform',
-				'Planned technical sprints for both backend and frontend teams, resulting in increased productivity',
-				'Developed backend REST API with financial logic, resulting in seamless cryptocurrency payment processing',
-				'Conducted unit tests to ensure code quality and identify any potential issues before release',
-				"Reviewed the development team's code, providing constructive feedback and ensuring adherence to coding standards",
-				'Led technical interviews for potential Javascript developers, resulting in the hiring of qualified team members',
+				`Successful Platform Launch: Developed and brought to market an MVP web service by building a reliable REST API-based backend core that ensured uninterrupted processing of cryptocurrency payments.`,
+				`Quality Culture Implementation: Established unit testing and code review practices, significantly enhancing codebase stability and reducing the number of pre-launch bugs.`,
+				`Process Organization and Team Growth: Led a team of 4+ developers and made key contributions to building a strong team by conducting interviews and making hiring decisions for JavaScript developers.`,
 			],
 			stack: [
 				ETech.typescript,
@@ -183,17 +180,13 @@ export const RESUME: IResume = {
 		{
 			role: 'Senior Backend Developer',
 			companyName: 'IBM',
-			projectDesc: `I worked with the IBM team to develop a web application for Geologists to reduce the cost of drilling and developing new sites.
-			The project involved both frontend, design, and backend specialists, as well as geologists on the customer side, and machine learning specialists.`,
-			from: new Date('2019 Oct'),
+			projectDesc: `For a geological analytics project, I was responsible for backend development, implementing a GraphQL API and a microservices architecture comprising 4 services.`,
+			from: new Date('2021 Sep'),
 			to: new Date('2022 Apr'),
 			achievements: [
-				'Developed a GraphQL API that utilized advanced geological analytics operations, enabling more sophisticated data analysis and visualization capabilities for end users',
-				'Established and maintained a highly scalable microservice architecture for four different services, ensuring seamless communication and data flow between them',
-				'Worked closely with analytics and product managers to identify and develop new application features, resulting in enhanced functionality and an improved user experience',
-				'Integrated machine learning features with core backend services on python and nodejs',
-				'Reviewed the work of the backend development team, providing feedback and guidance on coding standards, design patterns, and best practices',
-				'Conducted Javascript technical interviews with potential candidates, assessing their skills and experience',
+				`Architecture and Development: Designed and maintained a microservices ecosystem (including authorization, logging, and API services), and developed the core GraphQL API for complex analytical queries.`,
+				`Collaboration and Code Quality: Actively collaborated with analysts and product managers to ensure accurate feature implementation, and upheld high coding standards through regular code reviews within the backend team.`,
+				`Team Development: Contributed to team growth by conducting technical interviews and evaluating candidates for Node.js developer positions.`,
 			],
 			stack: [
 				ETech.typescript,
@@ -208,56 +201,41 @@ export const RESUME: IResume = {
 		},
 
 		{
-			role: 'Fullstack Developer',
-			companyName: 'Allbebet',
-			projectDesc: `I was invited to this project at the peak of the crypto ICOs.
-				It was necessary to develop a platform for betting on soccer matches.
-				Together with a small team, I managed to develop the MVP in a short time.
-				Unfortunately, the owners were not able to continue this project.`,
-			from: new Date('2019 Mar'),
-			to: new Date('2019 Aug'),
+			role: 'Backend Developer',
+			companyName: 'IBM',
+			projectDesc: `For a drilling company project, I developed and maintained key integration services, which contributed to operational cost optimization through automation.`,
+			from: new Date('2019 Jan'),
+			to: new Date('2021 Sep'),
 			achievements: [
-				'Developed a web application from Zero to MVP, utilizing technical expertise to design, develop and deploy a fully functional application that met all customer requirements',
-				'Planned backend and blockchain issues for the team, utilizing strategic planning and project management skills to identify potential roadblocks and develop solutions that ensured the timely delivery of high-quality software',
-				'Integrated blockchain for web application, utilizing expertise in blockchain technology to integrate a secure and reliable blockchain solution into the web application',
+				`Integration Solution Development: Built and maintained a microservice gateway for the Primavera system and a REST API gateway connecting the frontend with Python analytics, enabling efficient data exchange.`,
+				`Development Infrastructure Support: Was responsible for supporting internal NPM packages, which standardized and accelerated the company's development processes.`,
+				`Business Optimization Contribution: Participated in implementing technical solutions directly aimed at reducing the company's operational expenses.`,
 			],
-			stack: [
-				ETech.javascript,
-				ETech.nodejs,
-				ETech.express,
-				ETech.mongodb,
-				ETech.mongoose,
-				ETech.reactjs,
-				ETech.mobx,
-				ETech.antd,
-			],
+			stack: [ETech.typescript, ETech.nodejs, ETech.nestjs, ETech.postgres, ETech.typeorm],
 		},
 		{
 			role: 'Frontend Developer',
 			companyName: 'RobotVera',
-			projectDesc: `My first experience of participating in a startup, Robot Vera, is an AI assistant for searching candidates and making automated phone calls to them. The main client was a large business.`,
+			projectDesc: `For the RobotVera project, I worked on the frontend part of the web application (Automation HR-assistant settings).`,
 			from: new Date('2018 Jul'),
 			to: new Date('2019 Aug'),
 			achievements: [
-				'Enhanced the frontend performance of a web application, resulting in a faster and more responsive user experience',
-				'Developed and maintained a Content Management System (CMS) for company-wide use, streamlining content creation and management processes',
-				'Provided accurate estimates for technical tasks as a member of a team, resulting in efficient and effective project planning',
-				'Successfully refactored a large codebase of legacy HTML to modern React development, improving maintainability and scalability of the code',
+				`Modernization and Refactoring: Conducted a full refactoring of a legacy HTML codebase, migrating it to a modern stack using React, which significantly improved code maintainability and extensibility.`,
+				`Internal Tool Development: Developed and maintained a content management system (CMS) for internal use, automating key company business processes.`,
+				`Performance and Process Optimization: Actively worked on improving web application performance and participated in planning sessions, collaborating with the team to estimate technical tasks.`,
 			],
 			stack: [ETech.reactjs, ETech.mobx, ETech.mobx_state_tree, ETech.antd, ETech.django, ETech.html],
 		},
 		{
 			role: 'Frontend Developer',
 			companyName: 'Freelance - Dextra - Unit6',
-			projectDesc: `First steps in web development. I combined work in studio offices and remote freelancing.
-			A lot of questions and answers - as a result, I have gained a lot of experience in different fields.`,
+			projectDesc: `Throughout my freelance and agency career, I have successfully delivered numerous end-to-end projects, acquiring a broad range of skills in frontend development, CMS work, and client support.`,
 			from: START_DATE,
 			to: new Date('2018 Jun'),
 			achievements: [
-				'Created numerous web page markups with cross-platform support to ensure optimal user experience',
-				'Developed custom WordPress applications for freelance clients to meet their specific needs and requirements',
-				'Developed and maintained several Jira plugins to optimize project management and team collaboration',
-				'Maintained and improved the performance of current web solutions to enhance user experience and increase business efficiency',
+				`Cross-Platform Web Development: Built a large number of responsive and cross-browser compatible web pages for the company's clients, ensuring their correct display across all devices.`,
+				`CMS and Enterprise System Development: Developed and maintained functional WordPress sites for clients.`,
+				`Paid Solution Development: At the Unit6 development studio, created custom plugins to extend Jira standard functionality.`,
 			],
 			stack: [
 				ETech.javascript,
