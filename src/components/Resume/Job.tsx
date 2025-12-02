@@ -1,4 +1,4 @@
-import { format, intervalToDuration } from 'date-fns';
+import { add, format, intervalToDuration } from 'date-fns';
 import * as React from 'react';
 
 import { IJob } from './consts';
@@ -24,6 +24,18 @@ function formatDateDifference(startDate: Date, endDate: Date = new Date()) {
 	return `${years} year${years !== 1 ? 's' : ''} and ${months} month${months !== 1 ? 's' : ''}`;
 }
 
+const Achievment = ({ text }: { text: string }) => {
+	const [title, desc] = text.split(':');
+
+	return title && desc ? (
+		<>
+			<span className={styles.achTitle}>{title}</span>:<span className={styles.achDesc}>{desc}</span>
+		</>
+	) : (
+		<span className={styles.achTitle}>{title}</span>
+	);
+};
+
 export const Job = (props: IJob) => {
 	const date = (d: Date) => format(d, 'MMM yyyy');
 	const { role, companyName, projectDesc, achievements, from, to, stack } = props;
@@ -44,14 +56,18 @@ export const Job = (props: IJob) => {
 				{companyName}{' '}
 				<div className={styles.jobDates}>
 					{date(from)} – {date(to)}{' '}
-					<span className={styles.jobDatesDistance}>({formatDateDifference(to, from)})</span>
+					<span className={styles.jobDatesDistance}>
+						({formatDateDifference(add(to, { months: 1 }), from)})
+					</span>
 				</div>
 			</h4>
 			<div className={styles.jobDesc}>{projectDesc}</div>
 
 			<div className={styles.list}>
 				{achievements.map((a, key) => (
-					<li key={key}>{a}</li>
+					<li key={key}>
+						<Achievment text={a} />
+					</li>
 				))}
 			</div>
 		</div>

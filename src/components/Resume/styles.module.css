@@ -151,3 +151,11 @@
 	font-weight: 500;
 	cursor: default;
 }
+
+.achTitle {
+	font-weight: 500;
+}
+
+.achDesc {
+	color: var(--ifm-color-emphasis-900);
+}
